@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3e9546d4-d25e-46f9-8ea2-397ec47b346c}</ProjectGuid>
+    <ProjectGuid>{ff05df73-6fb0-4584-aa58-ad5ef6a0927b}</ProjectGuid>
     <RootNamespace>Diagramaktywnościżarówka</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dane.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Zarowka.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dane.h" />
+    <ClInclude Include="Zarowka.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dane.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
