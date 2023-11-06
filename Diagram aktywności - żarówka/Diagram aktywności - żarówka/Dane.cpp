@@ -14,36 +14,37 @@ void Dane::odbierz_dane() {
 
 	std::string myline{};
 	std::stringstream sstream{};
-	int value{};
+	int wartosc{};
 	int i{1};
 
-	if (!in_file) 
+	if (!in_file) {
 		//TODO: throw exception
+	}
 
 	while (in_file) {
 		std::getline(in_file, myline);
 		sstream.clear();
 		sstream.str("");
 		sstream << myline;
-		if (sstream >> value) {
+		if (sstream >> wartosc) {
 			switch (i) {
 			case 1:
-				godzina_zapalenia = value;
+				godzina_zapalenia = wartosc;
 				break;
 			case 2:
-				minuta_zapalenia = value;
+				minuta_zapalenia = wartosc;
 				break;
 			case 3:
-				natezenie = value;
+				natezenie = wartosc;
 				break;
 			case 4:
-				temperatura_barwy = value;
+				temperatura_barwy = wartosc;
 				break;
 			case 5:
-				godzina_zgaszenia = value;
+				godzina_zgaszenia = wartosc;
 				break;
 			case 6:
-				minuta_zgaszenia = value;
+				minuta_zgaszenia = wartosc;
 				break;
 			default:
 				//TODO: throw exception

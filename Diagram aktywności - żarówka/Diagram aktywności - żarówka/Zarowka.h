@@ -3,12 +3,12 @@
 #include "Dane.h"
 
 class Zarowka : protected Dane {
-	bool stan_zapalenia{ false };
-
-
-
+	bool stan_zapalenia;
 public:
 	Zarowka(bool status = false);
 	~Zarowka() = default;
-	bool czy_zapalona() const ;
+	void porcedura();
+	bool czy_zapalona() const;
+	int aktualna_godzina() const;
+	int aktualna_minuta() const;
 };
