@@ -7,29 +7,42 @@
 
 #include "Zarowka.h"
 
+#include <fstream>
+#include <string>
+
 Zarowka::Zarowka(bool status) : stan_zapalenia(status) {}
 
 void Zarowka::porcedura() {
+
+    std::ofstream plik("test.txt");
+    if (plik.is_open()) {
+        std::cout << "Plik dziala" << std::endl;
+    }
+    else {
+        std::cout << "Nie mo¿na otworzyæ pliku";
+    }
+
     while (true) {
         if (stan_zapalenia == false) {
-            if ((godzina_zapalenia < godzina_zgaszenia && aktualna_godzina() >= godzina_zapalenia)) {
+            if (aktualna_godzina() == godzina_zapalenia && aktualna_minuta() == minuta_zapalenia) {
                 stan_zapalenia = true;
-                std::cout << "ON" << std::endl;
+                plik << "ON" << std::endl;
             }
             else {
                 std::this_thread::sleep_for(std::chrono::seconds(1));
             }
         }
         else {
-            if ((godzina_zapalenia < godzina_zgaszenia && aktualna_godzina() >= godzina_zgaszenia)) {
+            if (aktualna_godzina() == godzina_zgaszenia && aktualna_minuta() == minuta_zgaszenia) {
                 stan_zapalenia = false;
-                std::cout << "OFF" << std::endl;
+                plik << "OFF" << std::endl;
             }
             else {
                 std::this_thread::sleep_for(std::chrono::seconds(1));
             }
         }
     }
+    plik.close();
 }
 
 bool Zarowka::czy_zapalona() const {
