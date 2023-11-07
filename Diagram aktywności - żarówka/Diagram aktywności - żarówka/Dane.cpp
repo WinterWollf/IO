@@ -15,7 +15,7 @@ void Dane::odbierz_dane() {
 	std::string myline{};
 	std::stringstream sstream{};
 	int wartosc{};
-	int i{1};
+	int i{ 1 };
 
 	if (!in_file) {
 		//TODO: throw exception
@@ -56,6 +56,6 @@ void Dane::odbierz_dane() {
 			//TODO: throw exception
 		}
 	}
-		
+
 	in_file.close();
 }

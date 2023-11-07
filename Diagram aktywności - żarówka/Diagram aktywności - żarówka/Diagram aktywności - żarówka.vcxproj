@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ff05df73-6fb0-4584-aa58-ad5ef6a0927b}</ProjectGuid>
+    <ProjectGuid>{5e856fb5-0f6f-49bc-bd91-7b87f16d6954}</ProjectGuid>
     <RootNamespace>Diagramaktywnościżarówka</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

@@ -19,7 +19,7 @@ void Zarowka::porcedura() {
         std::cout << "Plik dziala" << std::endl;
     }
     else {
-        std::cout << "Nie mo¿na otworzyæ pliku";
+        std::cout << "Nie mona otworzy pliku";
     }
 
     while (true) {
@@ -27,11 +27,11 @@ void Zarowka::porcedura() {
             if (godzina_zgaszenia >= godzina_zapalenia) {
                 if (
                     (aktualna_godzina() > godzina_zapalenia && aktualna_godzina() < godzina_zgaszenia)
-                    || 
+                    ||
                     (aktualna_godzina() == godzina_zapalenia && aktualna_minuta() >= minuta_zapalenia)
                     ||
                     (aktualna_godzina() == godzina_zgaszenia && aktualna_minuta() < minuta_zgaszenia)
-                   ) {
+                    ) {
                     //plik << "ON";
                     std::cout << "ON" << std::endl;
                     aktualizacja_stanu();
@@ -43,7 +43,7 @@ void Zarowka::porcedura() {
                     std::cout << "ON" << std::endl;
                     aktualizacja_stanu();
                 }
-                else if (aktualna_godzina() > godzina_zapalenia ) {
+                else if (aktualna_godzina() > godzina_zapalenia) {
                     //plik << "ON";
                     std::cout << "ON" << std::endl;
                     aktualizacja_stanu();
@@ -62,10 +62,10 @@ void Zarowka::porcedura() {
 }
 
 bool Zarowka::czy_zapalona() const {
-	if (stan_zapalenia == true)
-		return true;
-	else
-		return false;
+    if (stan_zapalenia == true)
+        return true;
+    else
+        return false;
 }
 
 int Zarowka::aktualna_godzina() const {
@@ -76,11 +76,11 @@ int Zarowka::aktualna_godzina() const {
     time(&czas);
 
     if (localtime_s(&czasInfo, &czas) != 0) {
-        //TODO: Obs³uga b³êdu - "B³¹d pobierania czasu.";
+        //TODO: Obsuga bdu - "Bd pobierania czasu.";
     }
 
     if (strftime(czasString, sizeof(czasString), "%H", &czasInfo) == 0) {
-        //TODO: Obs³uga b³êdu - B³¹d formatowania czasu.";
+        //TODO: Obsuga bdu - Bd formatowania czasu.";
     }
 
     return std::stoi(czasString);
@@ -94,11 +94,11 @@ int Zarowka::aktualna_minuta() const {
     time(&czas);
 
     if (localtime_s(&czasInfo, &czas) != 0) {
-        //TODO: Obs³uga b³êdu - "B³¹d pobierania czasu.";
+        //TODO: Obsuga bdu - "Bd pobierania czasu.";
     }
 
     if (strftime(czasString, sizeof(czasString), "%M", &czasInfo) == 0) {
-        //TODO: Obs³uga b³êdu - B³¹d formatowania czasu.";
+        //TODO: Obsuga bdu - Bd formatowania czasu.";
     }
 
     return std::stoi(czasString);

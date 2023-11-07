@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.7.34202.233
+VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Diagram aktywności - żarówka", "Diagram aktywności - żarówka\Diagram aktywności - żarówka.vcxproj", "{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Diagram aktywności - żarówka", "Diagram aktywności - żarówka\Diagram aktywności - żarówka.vcxproj", "{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +13,19 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Debug|x64.ActiveCfg = Debug|x64
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Debug|x64.Build.0 = Debug|x64
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Debug|x86.ActiveCfg = Debug|Win32
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Debug|x86.Build.0 = Debug|Win32
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Release|x64.ActiveCfg = Release|x64
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Release|x64.Build.0 = Release|x64
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Release|x86.ActiveCfg = Release|Win32
-		{FF05DF73-6FB0-4584-AA58-AD5EF6A0927B}.Release|x86.Build.0 = Release|Win32
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Debug|x64.ActiveCfg = Debug|x64
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Debug|x64.Build.0 = Debug|x64
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Debug|x86.Build.0 = Debug|Win32
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Release|x64.ActiveCfg = Release|x64
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Release|x64.Build.0 = Release|x64
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Release|x86.ActiveCfg = Release|Win32
+		{5E856FB5-0F6F-49BC-BD91-7B87F16D6954}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9AE146F4-F738-4B50-A3AF-F05DB7A5F566}
+		SolutionGuid = {B022C17E-D4BD-4068-8A41-79124DEF8E6A}
 	EndGlobalSection
 EndGlobal
