@@ -14,7 +14,7 @@ Zarowka::Zarowka(bool status) : stan_zapalenia(status) {}
 
 void Zarowka::porcedura() {
 
-    std::ofstream plik("test.txt");
+    std::ofstream plik("test.txt", std::ios_base::app);
     if (plik.is_open()) {
         std::cout << "Plik dziala" << std::endl;
     }
@@ -23,25 +23,41 @@ void Zarowka::porcedura() {
     }
 
     while (true) {
-        if (stan_zapalenia == false) {
-            if (aktualna_godzina() == godzina_zapalenia && aktualna_minuta() == minuta_zapalenia) {
-                stan_zapalenia = true;
-                plik << "ON" << std::endl;
+        if (czy_zapalona() == false) {
+            if (godzina_zgaszenia >= godzina_zapalenia) {
+                if (
+                    (aktualna_godzina() > godzina_zapalenia && aktualna_godzina() < godzina_zgaszenia)
+                    || 
+                    (aktualna_godzina() == godzina_zapalenia && aktualna_minuta() >= minuta_zapalenia)
+                    ||
+                    (aktualna_godzina() == godzina_zgaszenia && aktualna_minuta() < minuta_zgaszenia)
+                   ) {
+                    //plik << "ON";
+                    std::cout << "ON" << std::endl;
+                    aktualizacja_stanu();
+                }
             }
             else {
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                if (aktualna_godzina() + 24 <= godzina_zgaszenia + 24 && aktualna_minuta() < minuta_zgaszenia) {
+                    //plik << "ON";
+                    std::cout << "ON" << std::endl;
+                    aktualizacja_stanu();
+                }
+                else if (aktualna_godzina() > godzina_zapalenia ) {
+                    //plik << "ON";
+                    std::cout << "ON" << std::endl;
+                    aktualizacja_stanu();
+                }
             }
         }
         else {
-            if (aktualna_godzina() == godzina_zgaszenia && aktualna_minuta() == minuta_zgaszenia) {
-                stan_zapalenia = false;
-                plik << "OFF" << std::endl;
-            }
-            else {
-                std::this_thread::sleep_for(std::chrono::seconds(1));
-            }
+            std::cout << "Nie" << std::endl;
         }
+        //std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        //plik.flush();
+        std::cout << "Obrot petli" << std::endl;
     }
+
     plik.close();
 }
 
@@ -86,4 +102,8 @@ int Zarowka::aktualna_minuta() const {
     }
 
     return std::stoi(czasString);
+}
+
+void Zarowka::aktualizacja_stanu() {
+    stan_zapalenia = !stan_zapalenia;
 }

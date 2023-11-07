@@ -11,4 +11,5 @@ public:
 	bool czy_zapalona() const;
 	int aktualna_godzina() const;
 	int aktualna_minuta() const;
+	void aktualizacja_stanu();
 };
