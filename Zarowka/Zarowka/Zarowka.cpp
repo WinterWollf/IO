@@ -10,6 +10,7 @@
 Zarowka::Zarowka(bool status) : stan_zapalenia(status) {}
 
 void Zarowka::porcedura() {
+    rysuj();
     while (true) {
         int aktualna_h = aktualna_godzina();
         int aktualna_min = aktualna_minuta();
@@ -18,14 +19,20 @@ void Zarowka::porcedura() {
             if (godzina_zgaszenia >= godzina_zapalenia) {
                 if ((aktualna_h > godzina_zapalenia && aktualna_h < godzina_zgaszenia) || (aktualna_h == godzina_zapalenia && aktualna_min >= minuta_zapalenia) || (aktualna_h == godzina_zgaszenia && aktualna_min < minuta_zgaszenia)) {
                     aktualizacja_stanu();
+                    temperatura_barwy = temperatura_barwy;
+                    natezenie = natezenie;
                 }
             }
             else {
                 if ((aktualna_h + 24 < godzina_zgaszenia + 24) || (aktualna_h + 24 == godzina_zgaszenia + 24 && aktualna_min < minuta_zgaszenia) || (aktualna_h > godzina_zapalenia && aktualna_h >= godzina_zgaszenia)) {
                     aktualizacja_stanu();
+                    temperatura_barwy = temperatura_barwy;
+                    natezenie = natezenie;
                 }
                 else if (aktualna_h == godzina_zapalenia  && aktualna_min >= minuta_zapalenia) {
                     aktualizacja_stanu();
+                    temperatura_barwy = temperatura_barwy;
+                    natezenie = natezenie;
                 }
             }
         }
@@ -42,7 +49,7 @@ void Zarowka::porcedura() {
             }
         }
 
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::minutes(1));
     }
 }
 
@@ -112,4 +119,26 @@ int Zarowka::aktualna_minuta() {
 
 void Zarowka::aktualizacja_stanu() {
     stan_zapalenia = !stan_zapalenia;
+    rysuj();
+}
+
+void Zarowka::rysuj() const {
+    if (stan_zapalenia) {
+        std::cout << "       .\n"
+                     "   .   |    .\n"
+                     "    \\  |   /\n"
+                     "      ___\n"
+                     "-- - (   ) - --\n"
+                     "      \\ /\n"
+                     "    _ |=| _\n\n"
+                     "      ON\n";
+    }
+    else {
+        std::cout <<
+            "      ___\n"
+            "     (   )\n"
+            "      \\ /\n"
+            "      |=|\n\n"
+            "      OFF\n";
+    }
 }

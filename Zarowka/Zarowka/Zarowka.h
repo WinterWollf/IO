@@ -12,4 +12,5 @@ public:
 	int aktualna_godzina();
 	int aktualna_minuta();
 	void aktualizacja_stanu();
+	void rysuj() const;
 };
