@@ -2,8 +2,10 @@
 #include <thread>
 #include <chrono>
 #include <string>
+#include <iostream>
 
 #include "Zarowka.h"
+#include "Wyjatki.h"
 
 Zarowka::Zarowka(bool status) : stan_zapalenia(status) {}
 
@@ -57,14 +59,24 @@ int Zarowka::aktualna_godzina() {
     char czasString[3];
 
     time(&czas);
-
-    if (localtime_s(&czasInfo, &czas) != 0) {
-        //TODO: Obsuga bdu - "Bd pobierania czasu.";
+    try {
+        if (localtime_s(&czasInfo, &czas) != 0)
+            throw BladPobieraniaAktualnegoCzasu();
+    }
+    catch (const BladPobieraniaAktualnegoCzasu& ex) {
+        std::cerr << ex.what() << std::endl;
+        exit(88);
     }
 
-    if (strftime(czasString, sizeof(czasString), "%H", &czasInfo) == 0) {
-        //TODO: Obsuga bdu - Bd formatowania czasu.";
+    try {
+        if (strftime(czasString, sizeof(czasString), "%H", &czasInfo) == 0)
+            throw BledneFormatowanieCzasu();
     }
+    catch (const BledneFormatowanieCzasu& ex) {
+        std::cerr << ex.what() << std::endl;
+        exit(47);
+    }
+
 
     return std::stoi(czasString);
 }
@@ -76,13 +88,24 @@ int Zarowka::aktualna_minuta() {
 
     time(&czas);
 
-    if (localtime_s(&czasInfo, &czas) != 0) {
-        //TODO: Obsuga bdu - "Bd pobierania czasu.";
+    try {
+        if (localtime_s(&czasInfo, &czas) != 0)
+            throw BladPobieraniaAktualnegoCzasu();
+    }
+    catch (const BladPobieraniaAktualnegoCzasu& ex) {
+        std::cerr << ex.what() << std::endl;
+        exit(88);
     }
 
-    if (strftime(czasString, sizeof(czasString), "%M", &czasInfo) == 0) {
-        //TODO: Obsuga bdu - Bd formatowania czasu.";
+    try {
+        if (strftime(czasString, sizeof(czasString), "%M", &czasInfo) == 0)
+            throw BledneFormatowanieCzasu();
     }
+    catch (const BledneFormatowanieCzasu& ex) {
+        std::cerr << ex.what() << std::endl;
+        exit(47);
+    }
+
 
     return std::stoi(czasString);
 }
