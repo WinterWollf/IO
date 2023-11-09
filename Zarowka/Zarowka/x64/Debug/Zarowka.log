@@ -1,2 +1,6 @@
-﻿  Zarowka.cpp
-  Zarowka.vcxproj -> C:\Users\wikto\OneDrive\Pulpit\IO\Zarowka\x64\Debug\Zarowka.exe
+﻿  Dane.cpp
+  main.cpp
+  Zarowka.cpp
+  Generowanie kodu...
+  LINK : nie znaleziono elementu C:\Users\wikto\Desktop\IO\Zarowka\x64\Debug\Zarowka.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+  Zarowka.vcxproj -> C:\Users\wikto\Desktop\IO\Zarowka\x64\Debug\Zarowka.exe
