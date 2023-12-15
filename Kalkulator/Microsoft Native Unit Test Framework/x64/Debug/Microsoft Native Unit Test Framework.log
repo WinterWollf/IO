@@ -1,0 +1,3 @@
+﻿  Microsoft Native Unit Test Framework.cpp
+C:\Users\wikto\Desktop\IO\Kalkulator\Kalkulator\funkcje.cpp(9,11): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Microsoft Native Unit Test Framework.vcxproj -> C:\Users\wikto\Desktop\IO\Kalkulator\x64\Debug\Microsoft Native Unit Test Framework.dll
