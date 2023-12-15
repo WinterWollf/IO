@@ -25,5 +25,13 @@ double standard_deviation(const std::vector<double>& dane) {
     return deviation;
 }
 double exponent(const double number) {
-    return exp(number);
+    double result = 1.0;
+    double term = 1.0;
+
+    for (int i = 1; i <= 200; ++i) {
+        term *= number / i;
+        result += term;
+    }
+
+    return result;
 }

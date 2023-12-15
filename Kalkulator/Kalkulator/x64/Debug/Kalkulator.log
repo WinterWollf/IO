@@ -1,5 +1,2 @@
-﻿  funkcje.cpp
-C:\Users\wikto\Desktop\IO\Kalkulator\Kalkulator\funkcje.cpp(9,11): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-  main.cpp
-  Generowanie kodu...
+﻿  main.cpp
   Kalkulator.vcxproj -> C:\Users\wikto\Desktop\IO\Kalkulator\x64\Debug\Kalkulator.exe
