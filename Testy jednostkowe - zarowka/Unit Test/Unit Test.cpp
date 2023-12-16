@@ -62,7 +62,8 @@ namespace Testy_Jednostkowe
 		}
 		TEST_METHOD(Komunikacja) {
 			Zarowka zarowka;
-			std::string filePath = "C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt";
+			//std::string filePath = "C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt";
+			std::string filePath = "C:\\Users\\wikto\\OneDrive\\Pulpit\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt";
 
 			bool fileExists = std::ifstream(filePath).good();
 

@@ -1,1 +1,3 @@
-Inżynieria Oprogramowania
+# **Inżynieria Oprogramowania**
+
+## Wiktor Szyszka
