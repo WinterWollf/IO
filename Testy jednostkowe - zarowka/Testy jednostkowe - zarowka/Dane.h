@@ -9,7 +9,13 @@ protected:
 	int natezenie;
 	int temperatura_barwy;
 public:
-	Dane(int h = 10, int h_zgasz = 22, int min = 20, int min_zgasz = 25, int i = 65, int t_b = 3300);
+	Dane(int h = 0, int min = 0, int i = 0, int t_b = 0);
 	~Dane() = default;
 	void odbierz_dane();
+	int get_godzina_zapalenia();
+	int get_minuta_zapalenia();
+	int get_godzina_zgaszenia();
+	int get_minuta_zgaszenia();
+	int get_natezenie();
+	int get_temperatura_barwy();
 };

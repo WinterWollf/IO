@@ -6,13 +6,13 @@
 #include <sstream>
 #include <iostream>
 
-Dane::Dane(int h, int h_zgasz, int min, int min_zgasz, int i, int t_b) : godzina_zapalenia(h), godzina_zgaszenia(h_zgasz), minuta_zapalenia(min), minuta_zgaszenia(min_zgasz), natezenie(i), temperatura_barwy(t_b) {
-	//odbierz_dane();
+Dane::Dane(int h, int min, int i, int t_b) : godzina_zapalenia(h), godzina_zgaszenia(h), minuta_zapalenia(min), minuta_zgaszenia(min), natezenie(i), temperatura_barwy(t_b) {
+	odbierz_dane();
 }
 
 void Dane::odbierz_dane() {
 	std::ifstream in_file;
-	in_file.open("dane.txt");
+	in_file.open("C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt");
 
 	std::string myline{};
 	std::stringstream sstream{};
@@ -86,4 +86,28 @@ void Dane::odbierz_dane() {
 	}
 
 	in_file.close();
+}
+
+int Dane::get_godzina_zapalenia() {
+	return godzina_zapalenia;
+}
+
+int Dane::get_minuta_zapalenia() {
+	return minuta_zapalenia;
+}
+
+int Dane::get_godzina_zgaszenia() {
+	return godzina_zgaszenia;
+}
+
+int Dane::get_minuta_zgaszenia() {
+	return minuta_zgaszenia;
+}
+
+int Dane::get_natezenie() {
+	return natezenie;
+}
+
+int Dane::get_temperatura_barwy() {
+	return temperatura_barwy;
 }

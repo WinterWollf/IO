@@ -7,5 +7,9 @@
     <TestDuration Test="Zarowka.Komunikacja" Duration="1" />
     <TestDuration Test="Test_Zarowka.Komunikacja" Duration="1" />
     <TestDuration Test="Test_Zarowka.Zapalona" Duration="1" />
+    <TestDuration Test="Test_Zarowka.Zgaszona" Duration="1" />
+    <TestDuration Test="Test_Zarowka.Czas_Zapalenia" Duration="1" />
+    <TestDuration Test="Test_Zarowka.Czas_Zgaszenia" Duration="1" />
+    <TestDuration Test="Test_Zarowka.Parametry" Duration="1" />
   </TestDurations>
 </GtaTestDurations>
