@@ -6,9 +6,9 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace Unit_Test
+namespace Testy_Jednostkowe
 {
-	TEST_CLASS(Unit_Test)
+	TEST_CLASS(Test_Zarowka)
 	{
 	public:
 
@@ -58,6 +58,14 @@ namespace Unit_Test
 
 			Assert::AreEqual(65, natezenie, BledneNatezenie);
 			Assert::AreEqual(3300, temperatura_barwy, BlednaTemperaturaBarwowa);
+		}
+		TEST_METHOD(Komunikacja) {
+			Zarowka zarowka;
+			std::string filePath = "C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt";
+
+			bool fileExists = std::ifstream(filePath).good();
+
+			Assert::IsTrue(fileExists);
 		}
 	};
 }
