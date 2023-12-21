@@ -12,8 +12,8 @@ Dane::Dane(int h, int min, int i, int t_b) : godzina_zapalenia(h), godzina_zgasz
 
 void Dane::odbierz_dane() {
 	std::ifstream in_file;
-	//in_file.open("C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt");
-	in_file.open("C:\\Users\\wikto\\OneDrive\\Pulpit\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt");
+	in_file.open("C:\\Users\\wikto\\Desktop\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt");
+	//in_file.open("C:\\Users\\wikto\\OneDrive\\Pulpit\\IO\\Testy jednostkowe - zarowka\\Testy jednostkowe - zarowka\\dane.txt");
 
 	std::string myline{};
 	std::stringstream sstream{};

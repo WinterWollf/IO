@@ -1,2 +1,4 @@
-﻿  test.cpp
-  Google Test.vcxproj -> C:\Users\wikto\OneDrive\Pulpit\IO\Testy jednostkowe - zarowka\x64\Debug\Google Test.exe
+﻿  pch.cpp
+  test.cpp
+  LINK : nie znaleziono elementu C:\Users\wikto\Desktop\IO\Testy jednostkowe - zarowka\x64\Debug\Google Test.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
+  Google Test.vcxproj -> C:\Users\wikto\Desktop\IO\Testy jednostkowe - zarowka\x64\Debug\Google Test.exe
